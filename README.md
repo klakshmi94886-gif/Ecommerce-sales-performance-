@@ -1,16 +1,3 @@
 # Ecommerce-sales-performance-
 excel project
-# Project Title 🚀
-
-A brief but punchy description of what this project achieves.
-
-## 🛠 Tech Stack
-- **Frontend:** React, Tailwind CSS
-- **Backend:** Node.js, Express
-- **Database:** MongoDB
-
-## ⚙️ Installation
-
-1. Clone the repo:
-   ```bash
-   git clone [https://github.com/username/project-name.git](https://github.com/username/project-name.git)
+Ecommerce Sales Analysis: Data Cleaning, Analysis & Visualization📊 Project OverviewThis project involves a comprehensive analysis of an e-commerce transactional dataset using Microsoft Excel. The goal was to transform raw sales data into an interactive dashboard to identify sales trends, regional performance, and customer payment preferences.🎯 Project ObjectivesSales Trends: Identify seasonal peaks and declining trends using monthly revenue plots.  Category Performance: Analyze the distribution of sales across product categories.  Regional Analysis: Compare performance across North, South, East, and West regions.  Top 5 Products: Rank the highest revenue-generating products.  🛠️ Data Processing Workflow1. Data Entry & OrganizationImport: Data was imported via the Get Data tool in Excel.  Table Conversion: Range converted to an official Excel Table (SalesData) for structured referencing.  Data Types: Standardized formatting for Dates, Currency, and Numbers.  2. Data CleaningMissing Values: Addressed null values in discounts and totals (e.g., SALE26, SALE52) using Go To Special > Blanks.  Erroneous Records: Corrected inconsistencies where Unit_Price did not align with Total_Amount.  Date Normalization: Converted numeric Order_Date values into readable date formats.  Text Cleaning: Used PROPER() functions to fix inconsistent capitalization in product names.  3. Analysis & FormulasCalculations were performed using the following logic:Total Revenue: =Quantity * Unit_Price * (1 - Discount)  Discount Amount: =Quantity * Unit_Price * Discount  Order Categorization: Used =IF(Sales > 1000, "High", "Low")  📈 Descriptive StatisticsThe Total_Amount sales metric was analyzed using the Excel Analysis ToolPak:  MetricValueSum2,173,935  Mean1,086.97  Median868.72  Standard Deviation818.85  Skewness0.88  Count2,000 records  💡 Key InsightsPayment Preferences: PayPal is the dominant payment method, followed by Credit Cards and COD.  Top Performers: Stores 8, 12, and 17 drive the highest sales volumes.  Product Leaders: Products like PROD33 and PROD49 are top revenue generators.  Skewed Distribution: The mean is higher than the median, indicating that high-value bulk orders are pulling the average up.  🖼️ Dashboard PreviewThe final Excel Dashboard includes:Line Chart: Monthly Revenue Trends.  Clustered Column Chart: Regional Performance Comparison.  Pie Chart: Revenue Share by Payment Method.  Slicers: Interactive filtering by Store, Product, and Payment Type.  📂 File StructureRaw Data: Original unedited dataset.  Cleaned Data: Dataset after handling missing values and errors.  Pivot Tables: Summarized data for visualization.  Dashboard: Interactive visual representation.  
