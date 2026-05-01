@@ -1,7 +1,6 @@
 # Ecommerce-sales-performance-
-Excel project Ecommerce Sales Analysis: Data Cleaning, Analysis & Visualization
 
- Ecommerce Sales Performance
+ECommerce Sales Performance
 
 Excel project: Ecommerce Sales Analysis with Data Cleaning, Analysis, and Visualization.
 
