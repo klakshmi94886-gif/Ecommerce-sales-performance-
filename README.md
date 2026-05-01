@@ -9,8 +9,11 @@ This project involves a comprehensive analysis of an e-commerce transactional da
 🎯 Project Objectives
 
 •	Sales Trends (Line Chart): Plot Total_Amount against Order_Date (grouped by Month) to identify seasonal peaks or declining trends.
+
 •	Category Performance (Pie or Donut Chart): Show the distribution of sales across categories like Electronics, Clothing, or Home.
+
 •	Regional Analysis (Clustered Column Chart): Compare how different regions (North, South, East, West) are performing against each other.
+
 •	Top 5 Products (Bar Chart): Use a horizontal bar chart to rank the highest revenue-generating products.
 
 
@@ -56,6 +59,7 @@ Count         2,000 records
 •	Revenue by Payment Type: Compare Credit Card, PayPal, COD.
 •	Revenue by Store: Identify top-performing stores.
 •	Top Products: Rank products by total sales
+
 💡 Key Insights
 Payment Preferences: PayPal is the dominant payment method, followed by Credit Cards and COD.  
 Top Performers: Stores 8, 12, and 17 drive the highest sales volumes. 
@@ -71,6 +75,7 @@ The final Excel Dashboard includes:
 4. Slicers: Interactive filtering by Store, Product, and Payment Type.
    
 📂 File Structure
+
 Raw Data: Original unedited dataset.  
 Cleaned Data: Dataset after handling missing values and errors.  
 Pivot Tables: Summarized data for visualization. 
