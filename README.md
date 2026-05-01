@@ -4,6 +4,7 @@ Ecommerce Sales Analysis: Data Cleaning, Analysis & Visualization
 
 
 📊 Project Overview
+
 This project involves a comprehensive analysis of an e-commerce transactional dataset using Microsoft Excel. The goal was to transform raw sales data into an interactive dashboard to identify sales trends, regional performance, and customer payment preferences.
 
 🎯 Project Objectives
@@ -22,9 +23,12 @@ This project involves a comprehensive analysis of an e-commerce transactional da
 1. Data Entry & Organization
    
 
-•	Import Data: Use the provided E-commerce store dataset link. Go to the Data tab in    Excel and use Get Data to import your file.
-•	Table Conversion: Select your data range and press Ctrl + T to convert it into an official Excel Table. Name your table (e.g., SalesData) in the Table Design tab.
-•	Data Types: Ensure the "Date" column is formatted as a Date, "Price/Revenue" as Currency,    and "Quantity" as a Number
+•	Import Data: Use the provided E-commerce store dataset link. Go to the Data tab in    Excel and use Get Data to import your file
+
+•	Table Conversion: Select your data range and press Ctrl + T to convert it into an official Excel Table. Name your table
+    (e.g.,     SalesData) in the Table Design tab.
+•	Data Types: Ensure the "Date" column is formatted as a Date, "Price/Revenue" as Currency, and "Quantity" as a Number
+
 •	Text: Use PROPER() or UPPER() to fix inconsistent capitalization in product names.
 
 2. Data Cleaning
@@ -61,7 +65,9 @@ Count         2,000 records
 •	Top Products: Rank products by total sales
 
 💡 Key Insights
-Payment Preferences: PayPal is the dominant payment method, followed by Credit Cards and COD.  
+
+Payment Preferences: PayPal is the dominant payment method, followed by Credit Cards and COD. 
+
 Top Performers: Stores 8, 12, and 17 drive the highest sales volumes. 
 Product Leaders: Products like PROD33 and PROD49 are top revenue generators. 
 Skewed Distribution: The mean is higher than the median, indicating that high-value bulk orders are pulling the average up
