@@ -1,6 +1,4 @@
-# Ecommerce-sales-performance-
-
-ECommerce Sales Performance
+# Ecommerce Sales Performance 
 
 Excel project: Ecommerce Sales Analysis with Data Cleaning, Analysis, and Visualization.
 
