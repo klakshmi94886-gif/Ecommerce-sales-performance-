@@ -1,16 +1,18 @@
 # Ecommerce-sales-performance-
 excel project
 Ecommerce Sales Analysis: Data Cleaning, Analysis & Visualization
+
+
 📊 Project Overview
 This project involves a comprehensive analysis of an e-commerce transactional dataset using Microsoft Excel. The goal was to transform raw sales data into an interactive dashboard to identify sales trends, regional performance, and customer payment preferences.
+
 🎯 Project Objectives
 Sales Trends: Identify seasonal peaks and declining trends using monthly revenue plots.  
-
 Category Performance: Analyze the distribution of sales across product categories.  
-
 Regional Analysis: Compare performance across North, South, East, and West regions.  
-
 Top 5 Products: Rank the highest revenue-generating products.
+
+
 🛠️ Data Processing Workflow
 1. Data Entry & Organization
 Import: Data was imported via the Get Data tool in Excel.  
