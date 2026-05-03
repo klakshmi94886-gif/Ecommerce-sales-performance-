@@ -1,0 +1,68 @@
+import pandas as pd
+import streamlit as st
+import plotly.express as px
+
+# Set page configuration
+st.set_page_config(page_title="E-commerce Analytics Dashboard", layout="wide")
+
+@st.cache_data
+def load_data():
+    file_path = 'Ecommerce_Final_Assignment_Submission.xlsx'
+    # Loading the primary data sheet (assuming 'Sales_Data' or similar based on standard formats)
+    df = pd.read_excel(file_path, sheet_name=None)
+    return df
+
+# Load the data
+data_dict = load_data()
+# Assuming 'Data' is the main transactional sheet; adjust if your sheet name differs
+df = data_dict.get('Data') or list(data_dict.values())[0]
+
+# --- SIDEBAR FILTERS ---
+st.sidebar.header("Dashboard Filters")
+category = st.sidebar.multiselect("Select Category:", options=df['Category'].unique(), default=df['Category'].unique())
+region = st.sidebar.multiselect("Select Region:", options=df['Region'].unique(), default=df['Region'].unique())
+
+# Filtered Data
+filtered_df = df[(df['Category'].isin(category)) & (df['Region'].isin(region))]
+
+# --- HEADER SECTION ---
+st.title("📊 E-commerce Performance Dashboard")
+st.markdown("Converted from `Ecommerce_Final_Assignment_Submission.xlsx`")
+
+# --- KEY METRICS (KPIs) ---
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.metric("Total Sales", f"${filtered_df['Sales'].sum():,.2f}")
+with col2:
+    st.metric("Total Profit", f"${filtered_df['Profit'].sum():,.2f}")
+with col3:
+    st.metric("Orders", len(filtered_df))
+with col4:
+    st.metric("Avg. Discount", f"{filtered_df['Discount'].mean()*100:.1f}%")
+
+st.divider()
+
+# --- VISUALIZATIONS ---
+row1_col1, row1_col2 = st.columns(2)
+
+with row1_col1:
+    st.subheader("Sales by Category")
+    fig_cat = px.bar(filtered_df, x='Category', y='Sales', color='Category', template="plotly_white")
+    st.plotly_chart(fig_cat, use_container_width=True)
+
+with row1_col2:
+    st.subheader("Profitability by Region")
+    fig_reg = px.pie(filtered_df, values='Profit', names='Region', hole=0.4)
+    st.plotly_chart(fig_reg, use_container_width=True)
+
+# --- TREND ANALYSIS ---
+st.subheader("Monthly Sales Trend")
+# Ensure Order Date is datetime
+filtered_df['Order Date'] = pd.to_datetime(filtered_df['Order Date'])
+trend_df = filtered_df.resample('M', on='Order Date')['Sales'].sum().reset_index()
+fig_trend = px.line(trend_df, x='Order Date', y='Sales', markers=True)
+st.plotly_chart(fig_trend, use_container_width=True)
+
+# --- DATA TABLE ---
+with st.expander("View Raw Filtered Data"):
+    st.dataframe(filtered_df)
