@@ -69,7 +69,8 @@ The `Total_Amount` metric was analyzed using Excel Analysis ToolPak.
 - **Top Products:** Products such as `PROD33` and `PROD49` are top revenue generators.
 - **Sales Distribution:** A higher mean than median suggests right-skewed sales due to large orders.
 
-## 🖼️ Dashboard Preview
+## 🖼️ Dashboard Preview 
+<img width="605" height="401" alt="Screenshot_20260503_174456_Docs" src="https://github.com/user-attachments/assets/14efbf35-6823-4056-a503-2fde79291069" />
 
 The final Excel dashboard includes:
 
